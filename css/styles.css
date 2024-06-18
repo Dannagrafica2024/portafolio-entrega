@@ -1,0 +1,205 @@
+*{
+  margin: 0;
+  padding: o;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body{
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(228, 5, 98),rgb(202, 45, 92), rgb(158, 15, 158),rgb(74, 30, 145),rgb(42, 42, 151),rgb(70, 124, 224),rgb(37, 175, 209));
+}
+
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles{
+  position: relative;
+  display: flex;
+}
+
+.bubbles span{
+  position: relative;
+  width: 30%;
+  height: 60px;
+  background: rgb(56, 230, 236);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgb(18, 114, 138),0 0 50px rgb(56, 230, 236),
+  0 0 100px rgb(56, 230, 236);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+  background: rgb(194, 68, 233);
+  box-shadow: 0 0 0 10px rgb(105, 30, 148),0 0 50px rgb(194, 68, 233),
+  0 0 100px rgb(194, 68, 233);
+}
+
+
+@keyframes animate{
+  0%{
+      transform: translateY(100vh) scale(0);
+  }
+  100%{
+      transform: translateY(-10vh) scale(1);
+  }
+}
+
+
+:root{
+  --color:#17a2ff;
+  --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(rgb(228, 5, 98),rgb(202, 45, 92), rgb(158, 15, 158),rgb(74, 30, 145),rgb(42, 42, 151),rgb(70, 124, 224),rgb(37, 175, 209));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  --bs-border-width: 0.125rem;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.5rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.75rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-link-color: #1abc9c;
+  --bs-link-hover-color: #15967d;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #fff3cd;
+}
+
+
+.contenedor{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.contenedor figure{
+  position: relative;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(24, 123, 204, 0.5);
+  cursor: pointer;
+}
+
+
+.contenedor figure img{
+  width: 100%;
+  height: 100%;
+  transition: all500ms ease-out;
+}
+
+
+.contenedor figure .capa{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,103,123,0.7);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+
+.contenedor figure:hover> .capa{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.contenedor figure:hover> .capa h3{
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+
+.contenedor figure:hover> img{
+  transform: scale(1.3);
+}
+
+
+.contenedor figure:hover> .capa h3{
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 20px;
+}
+
+
+.contenedor figure:hover> .capa p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+
+@keyframes slide{
+  0%{
+    margin-left: 0%;
+  }
+  20%{
+    margin-left: 0%;
+  }
+
+  25%{
+    margin-left: -100%;
+  }
+  45%{
+    margin-left: -100%;
+  }
+
+  50%{
+    margin-left: -200%;
+  }
+  70%{
+    margin-left: -200%;
+  }
+
+  75%{
+    margin-left: -300%;
+  }
+  95%{
+    margin-left: -300%;
+  }
+
+  100%{
+    margin-left: -400%;
+  }
+  110%{
+    margin-left: -400%;
+  }
+
+  0%{
+    margin-left: 0%;
+  }
+  20%{
+    margin-left: 0%;
+  }
+}
+
